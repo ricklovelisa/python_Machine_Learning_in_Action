@@ -1,4 +1,4 @@
-__author__ = 'QQ'
+# -*- coding: utf-8 -*-
 
 from numpy import *
 import operator
@@ -20,7 +20,6 @@ def KNNClassification(test, dataSet, labels, k):
         voteIlabel = labels[sortedDistIndicies[i]]
         classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
     sortedClassCount = sorted(classCount.iteritems(), key = operator.itemgetter(1), reverse = True)
+    # operator.itemgetter(0), 定义了一个函数，其中key参数可以理解为，需要通过list或者字典中的哪一个域进行排序
+
     return sortedClassCount[0][0]
-
-
-

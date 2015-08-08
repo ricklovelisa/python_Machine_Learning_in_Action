@@ -1,4 +1,3 @@
-__author__ = 'QQ'
 
 import kNN_classification
 group, labels = kNN_classification.createDataSet()
