@@ -1,5 +1,4 @@
+# -*- coding: utf-8 -*-
 
-import kNN_classification
-group, labels = kNN_classification.createDataSet()
+from numpy import *
 
-print kNN_classification.KNNClassification([0.9, 0.2, 0.4], group, labels, 3)
