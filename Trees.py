@@ -28,3 +28,17 @@ def calcEntropy(dataSet):
         Entropy -= prob * log(prob, 2)
     return Entropy
 
+# 构建数据集
+def createDataSet():
+    dataSet = [[1, 1, 'yes'], [1, 1, 'yes'], [1, 0, 'no'], [0, 1, 'no'], [0, 1, 'no']]  # 这里用的是普通的数组
+    labels = ['no surfacing', 'flippers']
+    return dataSet, labels
+
+# 按照给定特征划分数据集
+def splitDataSet(dataSet, axis, value):
+    retDataSet = []
+    for featVec in dataSet:
+        reducedFeatVec = featVec[:axis]
+        reducedFeatVec.extend(featVec[axis + 1:])
+        retDataSet.append(reducedFeatVec)
+    return retDataSet

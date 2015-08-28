@@ -54,4 +54,10 @@ m = dataSet.shape[0]
 normDataSet = dataSet - tile(minVals, (m, 1))
 normDataSet2 = normDataSet/tile(ranges, (m, 1))
 
-print normDataSet, tile(ranges, (m, 1))
+# print normDataSet, tile(ranges, (m, 1))
+
+# “:”的用法
+a = [1, 2, 3, 4, 5]
+print a[1:3]             # 由此可以看出，:的用法和R中相似，只是其中的数字含义不同，[i:j]表示数组中下标为i到j-1的数据
+
+
